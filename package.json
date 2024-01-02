@@ -1,36 +1,25 @@
 {
-  "name": "template",
+  "name": "vsm-mock-server",
   "version": "1.0.0",
-  "description": "A template for my basic Express apps",
+  "description": "Mock server for vsm frontend testing",
   "main": "src/app.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc --project ./tsconfig.build.json",
+    "build": "tsc",
     "format": "prettier --write .",
-    "lint": "eslint --report-unused-disable-directives \"{src, e2e}/**/*.ts\"",
     "start": "tsx src/app.ts",
     "start:dev": "tsx watch --ignore src/**/*.spec.ts --ignore e2e --clear-screen=false src/app.ts",
-    "start:prod": "tsc --project ./tsconfig.build.json && node dist/app.js"
+    "start:prod": "tsc && node dist/app.js"
   },
   "keywords": [],
-  "author": "lanceHoenhymmm",
+  "author": "cottonTomato",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "express-async-errors": "^3.1.1",
-    "helmet": "^7.1.0",
-    "http-status": "^1.7.3"
+    "socket.io": "^4.7.2"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.16",
     "@types/express": "^4.17.17",
-    "@types/node": "^20.9.0",
-    "@typescript-eslint/eslint-plugin": "^6.6.0",
-    "@typescript-eslint/parser": "^6.6.0",
-    "eslint": "^8.49.0",
-    "eslint-config-prettier": "^9.0.0",
     "prettier": "^3.0.3",
     "tsx": "^4.1.1",
     "typescript": "^5.2.2"
